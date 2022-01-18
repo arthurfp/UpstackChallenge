@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Github Api</string>
+    <string name="title_auth_page_text">Github API</string>
+    <string name="input_auth_token_hint">Token</string>
+    <string name="error_auth_text">Invalid user or token!</string>
+    <string name="blank_token_error">Empty/Blank user or token input</string>
+    <string name="btn_auth_text">Auth</string>
+    <string name="repositories">Repositories</string>
+    <string name="name_repoItem_default">---------</string>
+    <string name="title_card_auth_text">Authentication</string>
+    <string name="input_auth_user_hint">User</string>
+</resources>

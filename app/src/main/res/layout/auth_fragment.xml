@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_auth_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="@dimen/title_auth_page_margin_horizontal"
+                android:text="@string/title_auth_page_text"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_auth_page_text_size"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.55" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_auth_body"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_auth_header">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/card_auth_margin"
+                android:background="@color/white"
+                android:elevation="5dp"
+                app:cardCornerRadius="@dimen/card_auth_radius"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.3"
+                tools:context=".ui.fragments.overview.AuthFragment">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/views_auth_padding">
+
+                    <TextView
+                        android:id="@+id/title_card_auth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/title_card_auth_margin"
+                        android:layout_marginBottom="@dimen/title_card_auth_margin"
+                        android:text="@string/title_card_auth_text"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/title_card_auth_text_size"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/input_auth_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/input_auth_user_hint"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:minHeight="@dimen/input_auth_min_height"
+                        android:textSize="@dimen/input_auth_text_size" />
+
+
+                    <EditText
+                        android:id="@+id/input_auth_token"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/input_auth_token_hint"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:minHeight="@dimen/input_auth_min_height"
+                        android:textSize="@dimen/input_auth_text_size" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_auth_error"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/layout_auth_error_margin"
+                        android:background="@drawable/error_box_shape"
+                        android:orientation="vertical"
+                        android:padding="@dimen/layout_auth_error_margin"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/error_auth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/error_auth_text"
+                            android:textAlignment="center"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/error_auth_text_size" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_auth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/btn_auth_margin_top"
+                        android:backgroundTint="@color/black"
+                        android:text="@string/btn_auth_text"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+
